@@ -74,7 +74,7 @@ while($result = mysqli_fetch_assoc($query)){
 <td><?php echo $result['email'];  ?></td>
 <td><?php echo $result['mobile'];  ?></td>
 <td><a href="update.php?id=<?php echo $result['id'];  ?>"><i class="fa fa-edit fa-2x" style="color:green" aria-hidden="true"></i></a></td>
-<td> <a href ='delet.php?ids=<?php echo $result['id'];  ?>' onclick="return confirm('Are you sure you want to delete??');"><i class="fa fa-trash fa-2x" style="color:red" aria-hidden="true"></i></";>
+<td> <a href ='delet.php?ids=<?php echo $result['id'];  ?>' onclick="return confirm('Are you sure you want to delete??');"><i class="fa fa-trash fa-2x" style="color:red" aria-hidden="true"></i></td>
 
 </tr>
 <?php
