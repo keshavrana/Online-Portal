@@ -38,13 +38,11 @@ if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $email = $_POST['email'];
     $mobile = $_POST['mobile'];
-    $password = $_POST['password'];
-
-    $pass = password_hash($password, PASSWORD_BCRYPT);
+ 
 
     $id = $_GET['id'];
 
-    $updatequery = "update registration set username='$username', email='$email', mobile='$mobile', password='$pass' where id=$id ";
+    $updatequery = "update registration set username='$username', email='$email', mobile='$mobile' where id=$id ";
 
     $iquery = mysqli_query($con, $updatequery);
 
@@ -82,14 +80,7 @@ if(isset($_POST['submit'])){
 		</div>
     	<input id="mobile1" name="mobile" class="form-control" placeholder="Phone number" type="text" value="<?php echo $result['mobile'];  ?>" required>
     </div> 
-    <!-- password// -->
 
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
-        <input id="pass1" name="password" class="form-control" placeholder="Create password" type="password" value="<?php echo $result['password'];  ?>" required>
-    </div> 
 
     <!-- create account// -->    
 
